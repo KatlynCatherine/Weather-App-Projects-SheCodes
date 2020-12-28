@@ -1,0 +1,118 @@
+.box {
+  border-radius: 15px;
+  width: 700px;
+  height: 600px;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  margin: 0 auto;
+}
+
+.inside {
+  color: black;
+  width: 98%;
+  height: 98%;
+  border-radius: 15px;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-image: url("winter_3.jpg");
+  background-repeat: no-repeat;
+  background-size: 110%;
+}
+
+form {
+  position: static;
+  right: -5;
+  text-align: center;
+}
+
+.main_weather {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  color: black;
+  width: 45%;
+  display: inline-block;
+}
+
+h1 {
+  text-align: left;
+}
+
+.circle_big {
+  border-radius: 50%;
+  width: 100px;
+  border-style: solid;
+  border-width: 2px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 40px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#number {
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.weather_day {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  color: black;
+  width: 50%;
+  height: 77%;
+  display: inline-block;
+}
+
+.circle_small {
+  border-radius: 50%;
+  width: 50px;
+  border-style: solid;
+  border-width: 2px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.weather_next_days {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  margin: 5px 5px 10px 5px;
+  padding: 5px 5px 5px 5px;
+  color: black;
+  width: 97%;
+}
+
+.day {
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+  display: inline-block;
+}
+
+.under {
+  display: block;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 25px;
+}
