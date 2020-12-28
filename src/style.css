@@ -116,3 +116,7 @@ h1 {
 h2 {
   font-size: 25px;
 }
+
+#link {
+    text-align: center;
+}
