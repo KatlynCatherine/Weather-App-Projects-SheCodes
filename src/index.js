@@ -1,31 +1,26 @@
+//Date and time
+
 let now = new Date();
 
-let h2 = document.querySelector("h2");
+let h2 = document.querySelector("#time");
 
-let date = now.getDate();
 let hours = now.getHours();
+
 let minutes = now.getMinutes();
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
 let day = days[now.getDay()];
 
-let months = [
-  "Jan",
-  "Feb",
-  "March",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec"
-];
-let month = months[now.getMonth()];
+if (hours < 10) {
+    hours = `0${hours}`;
+  }
 
-h2.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}`;
+if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+h2.innerHTML = `${day} ${hours}:${minutes}`;
 
 // Show search city
 
