@@ -168,9 +168,31 @@ searchCity("brno");
 //Forecast hours
 
 function forecastHour(response) {
-  let forecastHours = querySelector("#weather_day");
-  forecastHours.innerHTML = null;
+  let hourElement = document.querySelector("#forecastHour");
+  hourElement.innerHTML = null;
+  let forecast = null;
 
-}
+  for (let index = 0; index < 4; index++) {
+    forecast = response.data.list[index];
+    hourElement.innerHTML += `
+    <div class="under">
+      <div class="circle_small">
+        <img src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png" />
+      </div>
+      <span class="number"> ${formatHours(forecast.dt * 1000)} </span>
+                
+      <div class="weather-forecast-temperature">
+        <strong>${Math.round(forecast.main.temp_max)} °</strong> | ${Math.round(forecast.main.temp_min)}° 
+          </div></div>`;
+
+      }
+
+  
+ 
+  }
+
+
 
 
