@@ -61,14 +61,6 @@ h1 {
   vertical-align: middle;
 }
 
-.weather_day {
-  margin: 5px 5px 5px 5px;
-  padding: 5px 5px 5px 5px;
-  color: black;
-  width: 40%;
-  height: 40%;
-  display: inline-block;
-}
 
 .circle_small {
   border-radius: 50%;
@@ -90,11 +82,7 @@ h1 {
   width: 100%;
 }
 
-.day {
-  margin: 30px 5px 5px 0px;
-  padding: 5px 5px 5px 5px;
-  display: inline-block;
-}
+
 
 .under {
   display: block;
