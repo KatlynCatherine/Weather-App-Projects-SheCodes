@@ -4,25 +4,28 @@ let now = new Date();
 
 let h2 = document.querySelector("#time");
 
-let hours = now.getHours();
-
-let minutes = now.getMinutes();
-
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 let day = days[now.getDay()];
 
-if (hours < 10) {
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
     hours = `0${hours}`;
   }
-
-if (minutes < 10) {
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-h2.innerHTML = `${day} ${hours}:${minutes}`;
+  return `${hours}:${minutes}`;
+}
 
-console.log(`${day} ${hours}:${minutes}`);
+
+h2.innerHTML = `${day} ${formatHours(now)}`;
+
+console.log(`${day} ${formatHours(now)}`);
 
 // Show search city
 
@@ -38,7 +41,7 @@ function submitCity(city) {
   axios.get(url).then(displayWeather);
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+  axios.get(apiUrl).then(forecastHour);
 }
 
 let search = document.querySelector("#search-form");
@@ -119,7 +122,7 @@ function searchCurrentCity(position) {
   axios.get(url).then(displayWeather);
 
   let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
-  axios.get(url).then(displayForecast);
+  axios.get(url).then(forecastHour);
 }
 
 function getCurrentLocation(event) {
@@ -130,7 +133,12 @@ let currentButton = document.querySelector("button");
 currentButton.addEventListener("click", getCurrentLocation);
 
 
-//Show forecast
+//Show forecast hours
+
+function forecastHour() {
+
+
+}
 
 
 //Celsius & Fahrenheit
