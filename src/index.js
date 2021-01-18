@@ -36,7 +36,6 @@ function searchCity(event) {
 }
 
 function submitCity(city) {
-  event.preventDefault();
   let apiKey = "903072b38d3dbb124641c65ff0557cce";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(displayWeather);
@@ -168,7 +167,7 @@ celsiusLink.addEventListener("click", celsius);
 
 //Placeholder
 
-searchCity("brno");
+submitCity("brno");
 
 //Forecast hours
 
