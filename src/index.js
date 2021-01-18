@@ -30,12 +30,13 @@ console.log(`${day} ${formatHours(now)}`);
 // Show search city
 
 function searchCity(event) {
-
+  event.preventDefault();
   let search = document.querySelector("#searchCity");
   submitCity(search.value);
 }
 
 function submitCity(city) {
+  event.preventDefault();
   let apiKey = "903072b38d3dbb124641c65ff0557cce";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(displayWeather);
@@ -82,7 +83,7 @@ function displayWeather(response) {
   
   iconShow.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconShow.setAttribute("alt", response.data.weather[0].description);
 
@@ -128,11 +129,13 @@ function searchCurrentCity(position) {
 
 
 function getCurrentLocation(event) {
+   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchCurrentCity);
 }
 
 let currentButton = document.querySelector("button");
 currentButton.addEventListener("click", getCurrentLocation);
+
 
 //Celsius & Fahrenheit
 
@@ -179,7 +182,7 @@ function forecastHour(response) {
     hourElement.innerHTML += `
     <div class="under">
       <div class="circle_small">
-        <img src="http://openweathermap.org/img/wn/${
+        <img src="https://openweathermap.org/img/wn/${
           forecast.weather[0].icon
         }@2x.png" />
       </div>
@@ -190,9 +193,6 @@ function forecastHour(response) {
           </div></div>`;
 
       }
-
-  
- 
   }
 
 

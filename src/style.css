@@ -75,11 +75,13 @@ h1 {
   vertical-align: middle;
 }
 
-.weather_next_days {
-  margin: 5px 5px 10px 5px;
+.weather_day {
+  margin: 5px 5px 5px 5px;
   padding: 5px 5px 5px 5px;
   color: black;
-  width: 100%;
+  width: 40%;
+  height: 40%;
+  display: inline-block;
 }
 
 
@@ -96,7 +98,7 @@ h2 {
 
 .link {
     text-align: center;
-    margin-top: 45px;
+    margin-top: 90px;
 }
 
 ul {
