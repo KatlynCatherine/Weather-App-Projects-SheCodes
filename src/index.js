@@ -22,10 +22,12 @@ if (minutes < 10) {
 
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
+console.log(`${day} ${hours}:${minutes}`);
+
 // Show search city
 
 function searchCity(event) {
-  event.preventDefault();
+
   let search = document.querySelector("#searchCity");
   submitCity(search.value);
 }
@@ -35,7 +37,7 @@ function submitCity(city) {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(displayWeather);
 
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -69,7 +71,7 @@ function displayWeather(response) {
 
   humidityShow.innerHTML = response.data.main.humidity;
 
-  let windShown = document.querySelector("#wind");
+  let windShow = document.querySelector("#wind");
 
   windShow.innerHTML = Math.round(response.data.wind.speed);
 
@@ -81,7 +83,7 @@ function displayWeather(response) {
   );
   iconShow.setAttribute("alt", response.data.weather[0].description);
 
-  let sunsetShow = querySelector("#sunrise");
+  let sunsetShow = document.querySelector("#sunset");
 
   sunsetShow.innerHTML = sunsetCalculation(response.data.sys.sunset);
 }
@@ -116,12 +118,11 @@ function searchCurrentCity(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(url).then(displayWeather);
 
-  let url = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(url).then(displayForecast);
 }
 
 function getCurrentLocation(event) {
-  event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchCurrentCity);
 }
 
@@ -185,7 +186,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 
 //Placeholder
-searchCity("Brno");
 
+searchCity("brno");
 
 
