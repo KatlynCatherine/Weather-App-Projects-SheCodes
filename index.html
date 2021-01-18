@@ -34,25 +34,83 @@
             <div class="main_weather">
 
                 <div class="city">
-                    <h1>Prague</h1>
-                    <h2>placeholder</h2>
+                    <h1 id="city"></h1>
+                    <ul>
+                        <li>Current time: <span id="time"></span></li>
+                        <li id="decription"></li>
+                    </ul>
                 </div>
 
                 <br />
 
-                <div class="circle_big">❄</div><span id="number">3°C</span></p>
+                <div class="circle_big">
+                    <img src="" alt="Clear" id="icon" class="float-left" />
+                </div>
+                <span id="number"><a href="#" id="celsius-link" class="active">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a></span></p>
 
                 <br />
-
+        
                 <div class="time">
 
-                    <p>Sunrise at <strong>7.02 am</strong></p>
-                    <p>Chance of rain: <strong>25%</strong></p>
-                    <p>Sunset at <strong>4.15 pm</strong></p>
+                    <p>Sunrise at <span id="sunrise"></span> am</p>
+                    <p>Humidity: <span id="humidity"></span>%</p>
+                    <p>Wind: <span id="wind"></span> km/h</p>
+                    <p>Sunset at <span id="sunrise"></span> pm</p>
 
                 </div>
 
             </div>
+
+            <div class="weather_day">
+            
+                <div class="under">
+            
+                    <div class="circle_small">❄</div><span class="number"><strong>6 am</strong> -2°C</span>
+            
+                </div>
+            
+                <div class="under">
+            
+                    <div class="circle_small">❄</div><span class="number"><strong>8 am</strong> -2°C</span>
+            
+            
+                </div>
+            
+                <div class="under">
+            
+                    <div class="circle_small">❄</div><span class="number"><strong>10 am</strong> 0°C</span>
+            
+                </div>
+            
+                <div class="under">
+            
+                    <div class="circle_small">❄</div><span class="number"><strong>12 pm</strong> -2°C</span>
+            
+            
+                </div>
+            
+                <div class="under">
+            
+                    <div class="circle_small">❄</div><span class="number"><strong>4 pm</strong> 1°C</span>
+            
+                </div>
+            
+                <div class="under">
+            
+                    <div class="circle_small">❄</div><span class="number"><strong>8 pm</strong> -2°C</span>
+            
+            
+                </div>
+
+                <div class="under">
+                        
+                    <div class="circle_small">❄</div><span class="number"><strong>10 pm</strong> -2°C</span>
+                        
+                        
+                </div>
+                        
+             </div>
 
 
             <div class="weather_next_days">
