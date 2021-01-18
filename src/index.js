@@ -115,6 +115,9 @@ function searchCurrentCity(position) {
   let apiKey = "903072b38d3dbb124641c65ff0557cce";
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(url).then(displayWeather);
+
+  let url = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
+  axios.get(url).then(displayWeather);
 }
 
 function getCurrentLocation(event) {
