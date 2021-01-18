@@ -132,15 +132,6 @@ function getCurrentLocation(event) {
 let currentButton = document.querySelector("button");
 currentButton.addEventListener("click", getCurrentLocation);
 
-
-//Show forecast hours
-
-function forecastHour() {
-
-
-}
-
-
 //Celsius & Fahrenheit
 
 function farenheit(event) {
@@ -173,5 +164,13 @@ celsiusLink.addEventListener("click", celsius);
 //Placeholder
 
 searchCity("brno");
+
+//Forecast hours
+
+function forecastHour(response) {
+  let forecastHours = querySelector("#weather_day");
+  forecastHours.innerHTML = null;
+
+}
 
 
