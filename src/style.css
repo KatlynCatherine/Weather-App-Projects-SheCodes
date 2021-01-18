@@ -1,28 +1,18 @@
-.box {
-  border-radius: 15px;
-  width: 700px;
-  height: 600px;
-  padding: 5px 5px 5px 5px;
-  margin: 5px 5px 5px 5px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  margin: 0 auto;
-}
 
 .inside {
   color: black;
-  width: 98%;
-  height: 98%;
+  width: 500px;
+  height: 600px;
   border-radius: 15px;
   margin: 5px 5px 5px 5px;
   padding: 5px 5px 5px 5px;
-  border-style: solid;
+  border-style: groove;
   border-width: 2px;
   border-color: black;
-  background-image: url("winter_3.jpg");
+  background-image: url("background_1.jpg");
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: 100%;
+  margin: 0 auto;
 }
 
 form {
@@ -31,27 +21,34 @@ form {
   text-align: center;
 }
 
+#searchCity {
+  width: 50%;
+  padding: 0px 2px 5px 5px;
+  border-radius: 10px;
+  border-style: groove;
+
+}
+
 .main_weather {
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
   margin: 5px 5px 5px 5px;
   padding: 5px 5px 5px 5px;
   color: black;
-  width: 45%;
+  width: 50%;
+  height: 65%;
   display: inline-block;
 }
 
 h1 {
   text-align: left;
+  font-size: 30px;
 }
 
 .circle_big {
   border-radius: 50%;
-  width: 100px;
-  border-style: solid;
+  width: 80px;
+  border-style: groove;
   border-width: 2px;
-  height: 100px;
+  height: 80px;
   line-height: 100px;
   font-size: 40px;
   text-align: center;
@@ -65,23 +62,21 @@ h1 {
 }
 
 .weather_day {
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
   margin: 5px 5px 5px 5px;
   padding: 5px 5px 5px 5px;
   color: black;
-  width: 50%;
-  height: 77%;
+  width: 40%;
+  height: 60%;
+  vertical-align: right;
   display: inline-block;
 }
 
 .circle_small {
   border-radius: 50%;
-  width: 50px;
-  border-style: solid;
+  width: 30px;
+  border-style: groove;
   border-width: 2px;
-  height: 50px;
+  height: 30px;
   line-height: 50px;
   font-size: 20px;
   text-align: center;
@@ -90,20 +85,14 @@ h1 {
 }
 
 .weather_next_days {
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
   margin: 5px 5px 10px 5px;
   padding: 5px 5px 5px 5px;
   color: black;
-  width: 97%;
+  width: 100%;
 }
 
 .day {
-  border-style: solid;
-  border-width: 2px;
-  border-color: white;
-  margin: 5px 5px 5px 5px;
+  margin: 30px 5px 5px 0px;
   padding: 5px 5px 5px 5px;
   display: inline-block;
 }
@@ -119,4 +108,55 @@ h2 {
 
 .link {
     text-align: center;
+    margin-top: 45px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.circle_big img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
+.circle_small img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  color: rgb(135, 135, 135);
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
