@@ -126,3 +126,30 @@ let currentButton = document.querySelector("button");
 currentButton.addEventListener("click", getCurrentLocation);
 
 
+//Show forecast
+
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#weather_day");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="under">
+      <div class="circle_small"><img
+        src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png"
+      /></div>
+      <div class="weather-forecast-temperature">
+        <strong>
+          ${Math.round(forecast.main.temp_max)}°
+        </strong>
+        ${Math.round(forecast.main.temp_min)}°
+      </div>   
+    </div> `;
+  }
+}
+
+
