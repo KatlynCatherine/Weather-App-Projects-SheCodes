@@ -117,7 +117,7 @@ function searchCurrentCity(position) {
   axios.get(url).then(displayWeather);
 
   let url = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
-  axios.get(url).then(displayWeather);
+  axios.get(url).then(displayForecast);
 }
 
 function getCurrentLocation(event) {
