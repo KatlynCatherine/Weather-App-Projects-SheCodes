@@ -31,23 +31,21 @@ function searchCity(event) {
 }
 
 function submitCity(city) {
-  event.preventDefault();
   let apiKey = "903072b38d3dbb124641c65ff0557cce";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(displayWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 let search = document.querySelector("#search-form");
 search.addEventListener("submit", searchCity);
 
-function displayWeather(response) {
-  let cityDisplay = response.data.name;
-  let temperatureDisplay = Math.round(response.data.main.temp);
-  let citySearch = document.querySelector("h1");
-  let temperatureSearch = document.querySelector("#number");
-  citySearch.innerHTML = `${cityDisplay}`;
-  temperatureSearch.innerHTML = `${temperatureDisplay} °C`;
-}
+
+//Display weather
+
+
 
 // Show current city
 
@@ -64,3 +62,5 @@ function getCurrentLocation(event) {
 
 let currentButton = document.querySelector("button");
 currentButton.addEventListener("click", getCurrentLocation);
+
+
